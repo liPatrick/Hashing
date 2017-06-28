@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Foundation
 
 extension String {
     
@@ -41,8 +42,8 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        var encryptMe = "l23"
-        print(numeratorHash(val: encryptMe, numVal: 1))
+        var encryptMe = "l222"
+        print(numeratorHash(input: encryptMe, output: ""))
     }
 
     override func didReceiveMemoryWarning() {
@@ -50,37 +51,46 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    func numeratorHash(val: String, numVal: Int) -> String{
-        var string = ""
+    func numeratorHash(input: String, output: String) -> String{
+        print("here")
+        var out = output
+        var inp = input
         var counter = 0
-        var num = numVal
-        while (counter < val.characters.count){
-            string = String(num)
-            if (string.characters.count > 10){
-                return string.substring(to: 10)
-            }
-            if(counter+1 >= val.characters.count){
-                var firstVal = convertStringToNum(val: val[counter])
-                num = (num*2) + firstVal
+        var num = 1
+        
+        //generates one character
+        while (counter < input.characters.count){
+            if(counter+1 >= input.characters.count){
+                var firstVal = combineTwoValues(val1: convertStringToNum(val: input[counter]), val2: 7)
+                num = num + combineTwoValues(val1: firstVal, val2: num)
                 break
             }
-            var firstVal = convertStringToNum(val: val[counter]) * convertStringToNum(val: val[counter + 1])
-            num = (num*2) + firstVal
+            var firstVal = combineTwoValues(val1: convertStringToNum(val: input[counter]), val2: convertStringToNum(val: input[counter+1]))
+            num = num + combineTwoValues(val1: firstVal, val2: num)
             counter += 1
         }
-        string = String(num)
-        if (string.characters.count < 10){
-            return numeratorHash(val: val, numVal: num)
+        print(num % 10)
+        out = output + String(num % 10)
+        inp = input + output
+        
+        
+        if (out.characters.count < 10){
+            return numeratorHash(input: inp, output: out)
         }
-        else if (string.characters.count > 10){
-            string = string.substring(to: 10)
+        else if (out.characters.count >= 10){
+            out = out.substring(to: 10)
         }
-        return string
+        return out
+    }
+    
+    func combineTwoValues(val1: Int, val2: Int) -> Int{
+        var result: Int = (val1+1) * (val1+1) + (val2 + 2) * (val2 + 2) + val1 + val2
+        return result % 10
     }
     
     func convertStringToNum(val: String) -> Int{
         switch val {
-            case "0": return 0
+            case "0": return 1
         case "1": return 1
         case "2": return 2
         case "3": return 3

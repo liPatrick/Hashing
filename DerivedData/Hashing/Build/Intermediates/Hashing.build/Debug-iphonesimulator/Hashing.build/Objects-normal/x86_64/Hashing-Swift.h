@@ -159,7 +159,8 @@ SWIFT_CLASS("_TtC7Hashing14ViewController")
 @interface ViewController : UIViewController
 - (void)viewDidLoad;
 - (void)didReceiveMemoryWarning;
-- (NSString * _Nonnull)numeratorHashWithVal:(NSString * _Nonnull)val numVal:(NSInteger)numVal SWIFT_WARN_UNUSED_RESULT;
+- (NSString * _Nonnull)numeratorHashWithInput:(NSString * _Nonnull)input output:(NSString * _Nonnull)output SWIFT_WARN_UNUSED_RESULT;
+- (NSInteger)combineTwoValuesWithVal1:(NSInteger)val1 val2:(NSInteger)val2 SWIFT_WARN_UNUSED_RESULT;
 - (NSInteger)convertStringToNumWithVal:(NSString * _Nonnull)val SWIFT_WARN_UNUSED_RESULT;
 - (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;

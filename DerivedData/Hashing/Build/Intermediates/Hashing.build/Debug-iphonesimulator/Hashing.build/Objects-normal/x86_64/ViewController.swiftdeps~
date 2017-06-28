@@ -12,18 +12,19 @@ provides-member:
 - ["SS", "substring"]
 - ["SS", "subscript"]
 provides-dynamic-lookup:
+- "combineTwoValues"
 - "convertStringToNum"
 - "didReceiveMemoryWarning"
 - "numeratorHash"
 - "viewDidLoad"
 depends-top-level:
+- !private "%"
 - !private "*"
 - !private "+"
 - !private "+="
 - !private "-"
 - !private "..<"
 - !private "<"
-- !private ">"
 - !private ">="
 - "AssignmentPrecedence"
 - "Int"
@@ -40,6 +41,7 @@ depends-top-level:
 depends-member:
 - !private ["Ps9AnyObject", "String"]
 - !private ["Ps9AnyObject", "characters"]
+- !private ["Ps9AnyObject", "combineTwoValues"]
 - !private ["Ps9AnyObject", "convertStringToNum"]
 - !private ["Ps9AnyObject", "didReceiveMemoryWarning"]
 - !private ["Ps9AnyObject", "index"]
@@ -57,6 +59,7 @@ depends-member:
 - !private ["Ps7CVarArg", "Range"]
 - !private ["Ps7CVarArg", "String"]
 - !private ["Ps7CVarArg", "characters"]
+- !private ["Ps7CVarArg", "combineTwoValues"]
 - !private ["Ps7CVarArg", "convertStringToNum"]
 - !private ["Ps7CVarArg", "didReceiveMemoryWarning"]
 - !private ["Ps7CVarArg", "index"]
@@ -86,6 +89,7 @@ depends-member:
 - !private ["Ps28CustomDebugStringConvertible", "Range"]
 - !private ["Ps28CustomDebugStringConvertible", "String"]
 - !private ["Ps28CustomDebugStringConvertible", "characters"]
+- !private ["Ps28CustomDebugStringConvertible", "combineTwoValues"]
 - !private ["Ps28CustomDebugStringConvertible", "convertStringToNum"]
 - !private ["Ps28CustomDebugStringConvertible", "didReceiveMemoryWarning"]
 - !private ["Ps28CustomDebugStringConvertible", "index"]
@@ -130,6 +134,7 @@ depends-member:
 - !private ["Ps23CustomStringConvertible", "String"]
 - !private ["Ps23CustomStringConvertible", "_getBuiltinLogicValue"]
 - !private ["Ps23CustomStringConvertible", "characters"]
+- !private ["Ps23CustomStringConvertible", "combineTwoValues"]
 - !private ["Ps23CustomStringConvertible", "convertStringToNum"]
 - !private ["Ps23CustomStringConvertible", "didReceiveMemoryWarning"]
 - !private ["Ps23CustomStringConvertible", "index"]
@@ -150,6 +155,7 @@ depends-member:
 - !private ["Ps9Equatable", "String"]
 - !private ["Ps9Equatable", "_getBuiltinLogicValue"]
 - !private ["Ps9Equatable", "characters"]
+- !private ["Ps9Equatable", "combineTwoValues"]
 - !private ["Ps9Equatable", "convertStringToNum"]
 - !private ["Ps9Equatable", "didReceiveMemoryWarning"]
 - !private ["Ps9Equatable", "index"]
@@ -201,6 +207,7 @@ depends-member:
 - !private ["Ps8Hashable", "String"]
 - !private ["Ps8Hashable", "_getBuiltinLogicValue"]
 - !private ["Ps8Hashable", "characters"]
+- !private ["Ps8Hashable", "combineTwoValues"]
 - !private ["Ps8Hashable", "convertStringToNum"]
 - !private ["Ps8Hashable", "didReceiveMemoryWarning"]
 - !private ["Ps8Hashable", "index"]
@@ -238,6 +245,7 @@ depends-member:
 - !private ["Ps10MirrorPath", "substring"]
 - !private ["PSo8NSCoding", "String"]
 - !private ["PSo8NSCoding", "characters"]
+- !private ["PSo8NSCoding", "combineTwoValues"]
 - !private ["PSo8NSCoding", "convertStringToNum"]
 - !private ["PSo8NSCoding", "didReceiveMemoryWarning"]
 - !private ["PSo8NSCoding", "index"]
@@ -258,6 +266,7 @@ depends-member:
 - !private ["PSo9NSCopying", "subscript"]
 - !private ["PSo9NSCopying", "substring"]
 - !private ["PSo26NSExtensionRequestHandling", "String"]
+- !private ["PSo26NSExtensionRequestHandling", "combineTwoValues"]
 - !private ["PSo26NSExtensionRequestHandling", "convertStringToNum"]
 - !private ["PSo26NSExtensionRequestHandling", "didReceiveMemoryWarning"]
 - !private ["PSo26NSExtensionRequestHandling", "init"]
@@ -275,6 +284,7 @@ depends-member:
 - ["CSo8NSObject", "Int"]
 - ["CSo8NSObject", "String"]
 - !private ["CSo8NSObject", "characters"]
+- ["CSo8NSObject", "combineTwoValues"]
 - ["CSo8NSObject", "convertStringToNum"]
 - ["CSo8NSObject", "didReceiveMemoryWarning"]
 - !private ["CSo8NSObject", "index"]
@@ -288,6 +298,7 @@ depends-member:
 - ["CSo8NSObject", "viewDidLoad"]
 - !private ["PSo16NSObjectProtocol", "String"]
 - !private ["PSo16NSObjectProtocol", "characters"]
+- !private ["PSo16NSObjectProtocol", "combineTwoValues"]
 - !private ["PSo16NSObjectProtocol", "convertStringToNum"]
 - !private ["PSo16NSObjectProtocol", "didReceiveMemoryWarning"]
 - !private ["PSo16NSObjectProtocol", "index"]
@@ -352,6 +363,7 @@ depends-member:
 - !private ["Ps20TextOutputStreamable", "subscript"]
 - !private ["Ps20TextOutputStreamable", "substring"]
 - !private ["PSo21UIAppearanceContainer", "String"]
+- !private ["PSo21UIAppearanceContainer", "combineTwoValues"]
 - !private ["PSo21UIAppearanceContainer", "convertStringToNum"]
 - !private ["PSo21UIAppearanceContainer", "didReceiveMemoryWarning"]
 - !private ["PSo21UIAppearanceContainer", "init"]
@@ -360,6 +372,7 @@ depends-member:
 - !private ["PSo21UIAppearanceContainer", "viewDidLoad"]
 - ["PSo21UIAppearanceContainer", ""]
 - !private ["PSo18UIContentContainer", "String"]
+- !private ["PSo18UIContentContainer", "combineTwoValues"]
 - !private ["PSo18UIContentContainer", "convertStringToNum"]
 - !private ["PSo18UIContentContainer", "didReceiveMemoryWarning"]
 - !private ["PSo18UIContentContainer", "init"]
@@ -368,6 +381,7 @@ depends-member:
 - !private ["PSo18UIContentContainer", "viewDidLoad"]
 - ["PSo18UIContentContainer", ""]
 - !private ["PSo18UIFocusEnvironment", "String"]
+- !private ["PSo18UIFocusEnvironment", "combineTwoValues"]
 - !private ["PSo18UIFocusEnvironment", "convertStringToNum"]
 - !private ["PSo18UIFocusEnvironment", "didReceiveMemoryWarning"]
 - !private ["PSo18UIFocusEnvironment", "init"]
@@ -377,6 +391,7 @@ depends-member:
 - ["PSo18UIFocusEnvironment", ""]
 - ["CSo11UIResponder", "Int"]
 - ["CSo11UIResponder", "String"]
+- ["CSo11UIResponder", "combineTwoValues"]
 - ["CSo11UIResponder", "convertStringToNum"]
 - ["CSo11UIResponder", "didReceiveMemoryWarning"]
 - ["CSo11UIResponder", "init"]
@@ -384,6 +399,7 @@ depends-member:
 - !private ["CSo11UIResponder", "print"]
 - ["CSo11UIResponder", "viewDidLoad"]
 - !private ["PSo30UIResponderStandardEditActions", "String"]
+- !private ["PSo30UIResponderStandardEditActions", "combineTwoValues"]
 - !private ["PSo30UIResponderStandardEditActions", "convertStringToNum"]
 - !private ["PSo30UIResponderStandardEditActions", "didReceiveMemoryWarning"]
 - !private ["PSo30UIResponderStandardEditActions", "init"]
@@ -392,6 +408,7 @@ depends-member:
 - !private ["PSo30UIResponderStandardEditActions", "viewDidLoad"]
 - ["PSo30UIResponderStandardEditActions", ""]
 - !private ["PSo16UIStateRestoring", "String"]
+- !private ["PSo16UIStateRestoring", "combineTwoValues"]
 - !private ["PSo16UIStateRestoring", "convertStringToNum"]
 - !private ["PSo16UIStateRestoring", "didReceiveMemoryWarning"]
 - !private ["PSo16UIStateRestoring", "init"]
@@ -400,6 +417,7 @@ depends-member:
 - !private ["PSo16UIStateRestoring", "viewDidLoad"]
 - ["PSo16UIStateRestoring", ""]
 - !private ["PSo18UITraitEnvironment", "String"]
+- !private ["PSo18UITraitEnvironment", "combineTwoValues"]
 - !private ["PSo18UITraitEnvironment", "convertStringToNum"]
 - !private ["PSo18UITraitEnvironment", "didReceiveMemoryWarning"]
 - !private ["PSo18UITraitEnvironment", "init"]
@@ -409,6 +427,7 @@ depends-member:
 - ["PSo18UITraitEnvironment", ""]
 - ["CSo16UIViewController", "Int"]
 - ["CSo16UIViewController", "String"]
+- ["CSo16UIViewController", "combineTwoValues"]
 - ["CSo16UIViewController", "convertStringToNum"]
 - ["CSo16UIViewController", "didReceiveMemoryWarning"]
 - ["CSo16UIViewController", "init"]
@@ -418,6 +437,7 @@ depends-member:
 - ["CSo16UIViewController", ""]
 - ["C7Hashing14ViewController", "Int"]
 - ["C7Hashing14ViewController", "String"]
+- ["C7Hashing14ViewController", "combineTwoValues"]
 - ["C7Hashing14ViewController", "convertStringToNum"]
 - ["C7Hashing14ViewController", "deinit"]
 - ["C7Hashing14ViewController", "didReceiveMemoryWarning"]
@@ -488,6 +508,7 @@ depends-member:
 - !private ["Ps9_Hashable", "String"]
 - !private ["Ps9_Hashable", "_getBuiltinLogicValue"]
 - !private ["Ps9_Hashable", "characters"]
+- !private ["Ps9_Hashable", "combineTwoValues"]
 - !private ["Ps9_Hashable", "convertStringToNum"]
 - !private ["Ps9_Hashable", "didReceiveMemoryWarning"]
 - !private ["Ps9_Hashable", "index"]
@@ -590,4 +611,4 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Swift.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/UIKit.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/SwiftOnoneSupport.swiftmodule"
-interface-hash: "39a7b90712464940abf9aa3383a9b87e"
+interface-hash: "4f3acfab444d7ed3190831fe3d6735a9"
