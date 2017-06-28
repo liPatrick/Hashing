@@ -42,8 +42,8 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        var encryptMe = "l222"
-        print(numeratorHash(input: encryptMe, output: ""))
+        var encryptMe = "assd"
+        print(numeratorHash(input: encryptMe, output: "", count: 0))
     }
 
     override func didReceiveMemoryWarning() {
@@ -51,7 +51,7 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    func numeratorHash(input: String, output: String) -> String{
+    func numeratorHash(input: String, output: String, count: Int) -> String{
         print("here")
         var out = output
         var inp = input
@@ -62,29 +62,32 @@ class ViewController: UIViewController {
         while (counter < input.characters.count){
             if(counter+1 >= input.characters.count){
                 var firstVal = combineTwoValues(val1: convertStringToNum(val: input[counter]), val2: 7)
-                num = num + combineTwoValues(val1: firstVal, val2: num)
+                num = num + firstVal
                 break
             }
             var firstVal = combineTwoValues(val1: convertStringToNum(val: input[counter]), val2: convertStringToNum(val: input[counter+1]))
-            num = num + combineTwoValues(val1: firstVal, val2: num)
+            num = num + firstVal
             counter += 1
         }
         print(num % 10)
         out = output + String(num % 10)
-        inp = input + output
+        inp = String(num) + out
         
         
         if (out.characters.count < 10){
-            return numeratorHash(input: inp, output: out)
+            return numeratorHash(input: inp, output: out, count: count)
+        }else{
+            if (count == 100){
+                return out
+            }
+            var count1 = count + 1
+            return numeratorHash(input: out, output: "", count: count1)
+            
         }
-        else if (out.characters.count >= 10){
-            out = out.substring(to: 10)
-        }
-        return out
     }
     
     func combineTwoValues(val1: Int, val2: Int) -> Int{
-        var result: Int = (val1+1) * (val1+1) + (val2 + 2) * (val2 + 2) + val1 + val2
+        var result: Int = val1 + val2
         return result % 10
     }
     
